@@ -13,13 +13,13 @@ namespace code.Controllers
     [ApiController]
     public class PDFController : ControllerBase
     {
-        [HttpGet("/pdf/hello")]
+        [HttpGet("/api")]
         public ActionResult<String> Hello()
         {
             return "Hello";
         }
 
-        [HttpGet("/pdf/fromlink")]
+        [HttpGet("/api/pdf/fromlink")]
         public async Task<IActionResult> Link2PDF(string link)
         {
             GlobalProperties.EnableFallbackToRestrictedRenderingEngine = true;
